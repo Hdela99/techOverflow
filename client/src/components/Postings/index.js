@@ -41,31 +41,29 @@ export default function Postings() {
                                         <HStack >
                                             {Auth.loggedIn() && Auth.getProfile().data._id === owners_id._id ? (
                                                 <>
-                                                <Link
-                                                to={`/PostEditor/${_id}`}
-                                                >
-                                               <Button label="edit"> Edit</Button>
-                                                </Link>
-
-                                            <ButtonGroup>
-                                                <Register postId={_id} />
-                                            </ButtonGroup>
-                                                {/* Show the user avatars that signed up for this project */}
+                                                    <Link
+                                                        to={`/PostEditor/${_id}`}
+                                                    >
+                                                        <Button label="edit"> Edit</Button>
+                                                    </Link>
 
 
-                                                <MailTo email={owners_id.email} label={`${owners_id.firstName}`} />
-                                                <Avatar name='test' src={'./icons8-user-32.png'} />
+                                                    {/* Show the user avatars that signed up for this project */}
+
+
+                                                    <MailTo email={owners_id.email} label={`${owners_id.firstName}`} />
+                                                    <Avatar name='test' src={'./icons8-user-32.png'} />
                                                 </>
                                             ) : (
                                                 <>
-                                            <ButtonGroup>
-                                                <Register postId={_id} />
-                                            </ButtonGroup>
-                                                {/* Show the user avatars that signed up for this project */}
+                                                    <ButtonGroup>
+                                                        <Register postId={_id} />
+                                                    </ButtonGroup>
+                                                    {/* Show the user avatars that signed up for this project */}
 
 
-                                                <MailTo email={owners_id.email} label={`${owners_id.firstName}`} />
-                                                <Avatar name='test' src={'./icons8-user-32.png'} />
+                                                    <MailTo email={owners_id.email} label={`${owners_id.firstName}`} />
+                                                    <Avatar name='test' src={'./icons8-user-32.png'} />
                                                 </>
                                             )}
 
